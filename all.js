@@ -1,8 +1,26 @@
-console.log(axios);
-axios.get('https://hexschool.github.io/ajaxHomework/data.json').then(function(response){
-    console.log(response.data);
-    console.log(response.status);
-    console.log(response.statusText);
-    console.log(response.headers);
-    console.log(response.config);
+const checkboxes = document.querySelectorAll('.custom-radio');
+
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', function() {
+    if (this.checked) {
+      checkboxes.forEach(cb => {
+        if (cb !== this) {
+          cb.checked = false;
+        }
+      });
+    }
+  });
 });
+$("#button0").click(function(){
+ $(".idea").css("right","100%") 
+  });
+$("#button1").click(function(){
+ $(".idea").css("right","200%") 
+  });
+$("#button").click(function(){
+ $(".idea").css("right","0%") 
+  });
+
+
+
+
